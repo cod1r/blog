@@ -10,8 +10,14 @@ export default function Home() {
         and anything fun.
       </p>
       <ul>
-				<li><a href="firstpost">first post :)</a></li>
-				<li><a href="secondpost">second post. About useEffect and closures in React.</a></li>
+        <li>
+          <a href="firstpost">first post :)</a>
+        </li>
+        <li>
+          <a href="secondpost">
+            second post. About useEffect and closures in React.
+          </a>
+        </li>
       </ul>
     </div>
   );

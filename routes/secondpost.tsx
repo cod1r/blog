@@ -10,13 +10,13 @@ export default function SecondPost() {
         <div>
           <p>
             A little note as to why useEffect's do not properly update the state
-            if you don't update state based on t he current state. For example:
+            if you don't update state based on the current state. For example:
             <pre>
               <code>
                 {`function Component() {
   let [lst, setLst] = useState([]);
   useEffect(() => {
-    [1, 2, 3, 4, 5].map(n =&gt; setList([...lst, n]));
+   [1, 2, 3, 4, 5].map(n => setList([...lst, n]));
   }, []);
   return (
    <div>
@@ -62,14 +62,13 @@ export default function SecondPost() {
             In order to fix this problem, we need to change{" "}
             <pre>
               <code>
-                [1, 2, 3, 4, 5].map(n =&gt; setLst([...lst, n] ))
+                {`[1, 2, 3, 4, 5].map(n => setLst([...lst, n] ))`}
               </code>
             </pre>
             to{" "}
             <pre>
               <code>
-                [1, 2, 3, 4, 5].map(n =&gt; setLst(currentLst =&gt;
-                [...currentLst, n]))
+                {`[1, 2, 3, 4, 5].map(n => setLst(currentLst => [...currentLst, n]))`}
               </code>
             </pre>
           </p>
